@@ -10,18 +10,22 @@
 </head>
 <body>
     <div class="d-flex flex-column justify-content-center align-items-center form-container rounded">
-        <h3>Resultado Final</h3>
+        <h3 class="mb-3">Analisador de Número Real</h3>
+        <div class="col-12">
         <?php
-            $num = (int) $_REQUEST["num"];
-            $anterior = $num - 1;
-            $sucessor = $num + 1;
-            echo "O número anterior é $anterior";
-            echo "<br />";
-            echo "O número escolhido foi $num";
-            echo "<br />";
-            echo "O número sucessor é $sucessor"
+            $valor = (float) $_REQUEST["valor"];
+            $parteInteira = number_format((int) $valor, 3, ",", ".");
+            $parteFracionaria = number_format($valor - (int) $valor, 3, ",", ".");
+            $total = number_format($valor, 3, ",", ".");
+            echo "Analisando o numero <strong>$total</strong> informado pelo usuário é:";
+            echo "<ul>
+            <li>A parte inteira do número é:<strong> $parteInteira</strong></li>
+            <li>A parte fracionária do número é: <strong>$parteFracionaria</strong></li>
+        </ul>";
         ?>
-        <button class="btn btn-primary col-12 mt-3" onclick="javascript:window.location.href='form.php'">Voltar</button>
+        
+        <button class="btn btn-primary col-12" onclick="javascript:window.location.href='index.php'">Voltar</button>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
