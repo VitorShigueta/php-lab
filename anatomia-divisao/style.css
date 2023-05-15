@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(42,50,170);
+    background: linear-gradient(90deg, rgba(42,50,170,1) 29%, rgba(144,40,233,1) 80%);
+}
+
+.form-container {
+    min-width: 540px;
+    border: 1px solid #000000;
+    padding: 40px;
+    background-color: white;
+}
+
+.cima {
+    border-bottom: 4px solid black;
+}
+
+.div-height {
+    min-height: 5rem;
+}
+
+.esquerda {
+    border-right: 4px solid black;
+}
